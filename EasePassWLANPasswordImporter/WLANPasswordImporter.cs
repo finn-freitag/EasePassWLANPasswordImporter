@@ -67,7 +67,7 @@ namespace EasePassWLANPasswordImporter
             List<PasswordItem> items = new List<PasswordItem>();
             foreach (KeyValuePair<string, string> pair in wlanAccessNew)
             {
-                if (!string.IsNullOrEmpty(pair.Value))
+                if (!string.IsNullOrEmpty(pair.Value.Trim()))
                 {
                     PasswordItem item = new PasswordItem();
                     item.DisplayName = pair.Key;
@@ -99,7 +99,7 @@ namespace EasePassWLANPasswordImporter
         {
             if (e.Data != null)
             {
-                if (e.Data.Contains("Schl\u0081sselinhalt") || e.Data.Contains("Key Content"))
+                if (e.Data.Contains("selinhalt") || e.Data.Contains("Key Content"))
                 {
                     string password = e.Data.Split(':')[1].Substring(1);
                     Dictionary<string, string> newAccess = new Dictionary<string, string>();

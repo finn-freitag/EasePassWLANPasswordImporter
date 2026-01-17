@@ -15,7 +15,7 @@ namespace EasePassWLANPasswordImporter
 
         public string PluginAuthor => "Finn Freitag";
 
-        public string PluginAuthorURL => "https://github.com/finn-freitag";
+        public string PluginAuthorURL => "https://finnfreitag.com?ref=ep_plgn_wlanimp";
 
         public Uri PluginIcon => Icon.GetIconUri();
     }
